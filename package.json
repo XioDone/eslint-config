@@ -1,0 +1,40 @@
+{
+  "name": "eslint-config",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "bun@1.1.18",
+  "description": "",
+  "author": "",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "dev": "bun --bun vite",
+    "release": "bumpp",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "c": "rm -rf node_modules pnpm-lock.yaml package-lock.json bun.lockb dist example/node_modules"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "2.22.0-beta.3",
+    "@types/node": "^20.14.10",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "bumpp": "^9.4.1",
+    "eslint": "^9.6.0",
+    "lint-staged": "^15.2.7",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.5.3",
+    "unocss": "^0.61.3",
+    "unoist": "^0.0.3",
+    "unplugin-auto-import": "^0.17.6",
+    "unplugin-vue-components": "^0.27.2",
+    "vite": "^5.3.3",
+    "vite-plugin-url-copy": "^1.1.4",
+    "vue": "^3.4.31"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "bun lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

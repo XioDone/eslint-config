@@ -23,10 +23,12 @@ selenium-debug.log
 *.njsproj
 *.sln
 
+dist.zip
 auto-imports.d.ts
 package-lock.json
-yarn.lock
-dist.zip
-# components.d.ts
 report.html
+components.d.ts
+
 pnpm-lock.yaml
+yarn.lock
+bun.lockb
