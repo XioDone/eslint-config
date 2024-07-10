@@ -1,7 +1,17 @@
-import antfu from '@antfu/eslint-config'
+/**
+ * Based on {@link https://github.com/antfu/eslint-config | antfu/eslint-config}
+ * @example
+ * ```ts
+ *  import antfu from '@antfu/eslint-config'
+ *  import xiodone from '@xiodone/eslint-config'
+ *
+ *  export default antfu(...xiodone())
+ * ```
+ */
 
-const config = antfu(
+export default (): expose => [
   {
+    unocss: true,
     ignores: [],
   },
   {
@@ -21,7 +31,7 @@ const config = antfu(
   },
   {
     rules: {
-      // 'ts/ban-types': [2, { types: { Function: false } }],
+      'ts/no-unsafe-function-type': 0,
     },
   },
   {
@@ -40,6 +50,4 @@ const config = antfu(
       'node/prefer-global/process': 'off',
     },
   },
-)
-
-export default config
+]
