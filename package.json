@@ -30,7 +30,7 @@
     "dist"
   ],
   "scripts": {
-    "prepublishOnly": "bun build",
+    "prepublishOnly": "bun run build",
     "tsup:build": "tsup-node",
     "build": "bun --bun unbuild",
     "release": "bumpp && npm publish",
