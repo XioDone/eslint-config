@@ -5,6 +5,7 @@
   "packageManager": "bun@1.1.18",
   "description": "XioDone's ESLint config.",
   "author": "XioDone",
+  "license": "MIT",
   "homepage": "https://github.com/XioDone/eslint-config",
   "repository": {
     "type": "git",
