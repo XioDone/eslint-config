@@ -1,6 +1,6 @@
 <h2>@xiodone/eslint-config</h2>
 
-This package is not an ESLint plugin; it is a rule set for configuring [@antfu/eslint-config](https://github.com/antfu/eslint-config).
+This package is not an ESLint plugin, it is a rule set for configuring [@antfu/eslint-config](https://github.com/antfu/eslint-config).
 
 ## Install
 
@@ -10,7 +10,7 @@ This package is not an ESLint plugin; it is a rule set for configuring [@antfu/e
 
 ## Usage
 
-Create eslint.config.mjs in your project root, for more details of @antfu/eslint-config, please refer to the [documentation](https://github.com/antfu/eslint-config/blob/main/README.md).
+Create eslint.config.js in your project root, for more details of @antfu/eslint-config, please refer to the [documentation](https://github.com/antfu/eslint-config/blob/main/README.md).
 
 ```ts
 // eslint.config.js
