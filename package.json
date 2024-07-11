@@ -3,10 +3,32 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "bun@1.1.18",
-  "description": "",
+  "description": "XioDone's ESLint config.",
   "author": "XioDone",
-  "keywords": [],
-  "main": "index.js",
+  "homepage": "https://github.com/XioDone/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XioDone/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XioDone/eslint-config/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepublishOnly": "pnpm build",
     "tsup:build": "tsup-node",
@@ -14,7 +36,7 @@
     "release": "bumpp && npm publish",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "c": "rm -rf node_modules pnpm-lock.yaml package-lock.json bun.lockb dist example/node_modules"
+    "c": "rm -rf node_modules pnpm-lock.yaml package-lock.json bun.lockb dist"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.22.0",
