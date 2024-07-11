@@ -11,7 +11,6 @@
 
 export default (): expose => [
   {
-    unocss: true,
     ignores: [],
   },
   {
