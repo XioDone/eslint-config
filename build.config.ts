@@ -1,3 +1,5 @@
+import { copyFile } from 'node:fs/promises'
+import path from 'node:path'
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig([
@@ -16,8 +18,11 @@ export default defineBuildConfig([
         minify: true,
       },
     },
-    declaration: true,
+    declaration: false,
     failOnWarn: false,
+    hooks: {
+      'build:done': generateTypes,
+    },
     externals: [
       'fsevents',
       'node:url',
@@ -48,7 +53,7 @@ export default defineBuildConfig([
         minify: true,
       },
     },
-    declaration: true,
+    declaration: false,
     failOnWarn: false,
     externals: [
       'fsevents',
@@ -66,3 +71,9 @@ export default defineBuildConfig([
     ],
   },
 ])
+
+function generateTypes() {
+  const source = path.join('src', 'types.d.ts')
+  const destination = path.join('dist', 'index.d.ts')
+  copyFile(source, destination)
+}
