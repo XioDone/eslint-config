@@ -18,9 +18,9 @@ import linter from '@antfu/eslint-config'
 import xiodone from '@xiodone/eslint-config'
 
 export default linter(
-  ...xiodone(),
   {
     // Your custom rules
-  }
+  },
+  ...xiodone(),
 )
 ```
