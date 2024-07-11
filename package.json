@@ -8,8 +8,10 @@
   "keywords": [],
   "main": "index.js",
   "scripts": {
-    "dev": "bun --bun vite",
-    "release": "bumpp",
+    "prepublishOnly": "pnpm build",
+    "tsup:build": "tsup-node",
+    "build": "unbuild",
+    "release": "bumpp && npm publish",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "c": "rm -rf node_modules pnpm-lock.yaml package-lock.json bun.lockb dist example/node_modules"
@@ -24,7 +26,9 @@
     "eslint-ts-patch": "^9.5.0-0",
     "lint-staged": "^15.2.7",
     "simple-git-hooks": "^2.11.1",
+    "tsup": "^8.1.0",
     "typescript": "^5.5.3",
+    "unbuild": "^2.0.0",
     "unocss": "^0.61.3",
     "unoist": "^0.0.3",
     "unplugin-auto-import": "^0.17.6",
