@@ -1,14 +1,3 @@
-/**
- * Based on {@link https://github.com/antfu/eslint-config | antfu/eslint-config}
- * @example
- * ```ts
- *  import antfu from '@antfu/eslint-config'
- *  import xiodone from '@xiodone/eslint-config'
- *
- *  export default antfu(...xiodone())
- * ```
- */
-
 export default (): expose => [
   {
     ignores: [],
