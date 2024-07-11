@@ -12,10 +12,10 @@ declare global {
  *  import xiodone from '@xiodone/eslint-config'
  *
  *  export default linter(
- *    ...xiodone(),
  *    {
  *      // Your custom rules
  *    }
+ *    ...xiodone(),
  *  )
  * ```
  */

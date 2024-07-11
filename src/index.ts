@@ -1,7 +1,4 @@
-export default (): expose => [
-  {
-    ignores: [],
-  },
+export default (): Expose => [
   {
     rules: {
       'curly': ['error', 'all'],
