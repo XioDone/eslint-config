@@ -17,6 +17,7 @@ export default (): Expose => [
   {
     rules: {
       'ts/no-unsafe-function-type': 0,
+      'ts/no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
     },
   },
   {
